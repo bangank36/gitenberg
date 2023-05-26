@@ -56,7 +56,7 @@ function attachEditor( dom ) {
 				sidebar: {inserter: false, inspector: false},
 				toolbar: {navigation: true, inspector: true},
 				blocks: {
-					allowBlockss: [
+					allowBlocks: [
 						'core/image',
 						'core/heading',
 						'core/quote',
