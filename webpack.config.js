@@ -2,8 +2,10 @@ const path = require( 'path' );
 const webpack = require( 'webpack' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const TerserJSPlugin = require( 'terser-webpack-plugin' );
+const RunChromeExtension = require('webpack-run-chrome-extension')
 
 const config = {
+	devtool: 'inline-source-map',
 	entry: './src/index.js',
 	output: {
 		filename: 'gutenberg-everywhere.js',
@@ -35,6 +37,7 @@ const config = {
 		},
 		modules: [ path.resolve( __dirname, 'node_modules' ) ],
 	},
+	watch: true,
 	plugins: [
 		new webpack.DefinePlugin( {
 			'process.env': { NODE_ENV: JSON.stringify( process.env.NODE_ENV || 'development' ) },
@@ -45,6 +48,10 @@ const config = {
 		// new webpack.ProvidePlugin( {
 		// 	process: 'process/browser',
 		// } ),
+		new RunChromeExtension({
+			extensionPath: path.resolve( __dirname ),
+			startingUrl: 'https://github.com/bangank36/spriral-learning/issues/17'
+		})
 	],
 	optimization: {
 		minimizer: [

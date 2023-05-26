@@ -2,3 +2,7 @@ node_modules/
 build
 release
 /dist
+~
+default
+false
+undefined
