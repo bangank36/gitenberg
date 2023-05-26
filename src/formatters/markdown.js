@@ -1,9 +1,12 @@
 import TurndownService from 'turndown';
 import MarkdownIt from 'markdown-it';
+import { gfm } from './turndown-gfm';
 
 const turndown = new TurndownService( {
 	bulletListMarker: '-',
 } );
+
+gfm( turndown );
 
 turndown.addRule( 'listItem', {
 	filter: 'li',
