@@ -48,6 +48,26 @@ function attachEditor( dom ) {
 			} else {
 				submit.removeAttribute( 'disabled' );
 			}
+		}, {
+			iso: {
+				moreMenu: {
+					topToolbar: true
+				},
+				sidebar: {inserter: false, inspector: false},
+				toolbar: {navigation: true, inspector: true},
+				blocks: {
+					allowBlockss: [
+						'core/image',
+						'core/heading',
+						'core/quote',
+						'core/list',
+						'core/pullquote',
+						'core/table',
+						'core/table',
+						'core/paragraph'
+					]
+				}
+			}
 		}
 	);
 }
