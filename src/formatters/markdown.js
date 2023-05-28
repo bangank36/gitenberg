@@ -1,12 +1,15 @@
 import TurndownService from 'turndown';
 import MarkdownIt from 'markdown-it';
 import { gfm } from './turndown-gfm';
+import { gitenbergRenderer } from './markdown-it-renderer';
 
 const turndown = new TurndownService( {
 	bulletListMarker: '-',
 } );
-
 gfm( turndown );
+
+const md = new MarkdownIt();
+gitenbergRenderer(md);
 
 turndown.addRule( 'listItem', {
 	filter: 'li',
@@ -40,10 +43,10 @@ export function load( content, parser, rawHandler ) {
 		return parser( content.value );
 	}
 
-	const md = new MarkdownIt();
+	let htmlContent = md.render( content.value );
 
 	// Raw HTML - do our best
-	return rawHandler( { HTML: md.render( content.value ) } );
+	return rawHandler( { HTML: htmlContent } );
 }
 
 /**
