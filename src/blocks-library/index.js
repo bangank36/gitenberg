@@ -1,4 +1,4 @@
 /**
  * Blocks
  */
-import './submit';
+import './shields-badge';
