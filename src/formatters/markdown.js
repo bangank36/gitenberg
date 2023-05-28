@@ -43,19 +43,8 @@ export function load( content, parser, rawHandler ) {
 		return parser( content.value );
 	}
 
-	const htmlContent = `
-	<p><!-- wp:gitenberg/shields-badge --><div class="wp-block-gitenberg-shields-badge">
-					<img src="https://shields.io/badge/style-flat--square-green?label=healthinesses&amp;logo=appveyor&amp;logoColor=violet&amp;logoWidth=40&amp;labelColor=abcdef&amp;color=fedcba&amp;style=flat-square"/>
-				</div><!-- /wp:gitenberg/shields-badge --></p>
-<p><!-- wp:gitenberg/shields-badge --><div class="wp-block-gitenberg-shields-badge">
-					<img src="https://shields.io/badge/style-flat--square-green?label=healthinesses&amp;logo=appveyor&amp;logoColor=violet&amp;logoWidth=40&amp;labelColor=abcdef&amp;color=fedcba&amp;style=flat-square"/>
-				</div><!-- /wp:gitenberg/shields-badge --></p>
-<p><!-- wp:gitenberg/shields-badge --><div class="wp-block-gitenberg-shields-badge">
-					<img src="https://shields.io/badge/style-flat--square-green?label=healthinesses&amp;logo=appveyor&amp;logoColor=violet&amp;logoWidth=40&amp;labelColor=abcdef&amp;color=fedcba&amp;style=flat-square"/>
-				</div><!-- /wp:gitenberg/shields-badge --></p>
-<p><img src="https://placehold.co/600x400/EEE/31343C" alt=""></p>
-	`;
-
+	let htmlContent = md.render( content.value );
+	
 	console.log(htmlContent);
 
 	// Raw HTML - do our best
