@@ -12,25 +12,25 @@ function Inspector( props ) {
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Parameters', 'cf7-blocks' ) }>
+			<PanelBody title={ __( 'Parameters', 'gitenberg' ) }>
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={label}
-					label={__('Label', 'cf7-blocks')}
-					help={__('Left-hand-side text', 'cf7-blocks')}
+					label={__('Label', 'gitenberg')}
+					help={__('Left-hand-side text', 'gitenberg')}
 					onChange={(newValue) => props.setAttributes({ label: newValue })}
 				/>
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={logo}
-					label={__('Logo', 'cf7-blocks')}
-					help={__('Insert the logo name or custom logo image.', 'cf7-blocks')}
+					label={__('Logo', 'gitenberg')}
+					help={__('Insert the logo name or custom logo image.', 'gitenberg')}
 					onChange={(newValue) => props.setAttributes({ logo: newValue })}
 				/>
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={ logoColor }
-					label={__('Logo Color', 'cf7-blocks')}
+					label={__('Logo Color', 'gitenberg')}
 					onChange={ ( newValue ) =>
 						props.setAttributes( { logoColor: newValue } )
 					}
@@ -38,7 +38,7 @@ function Inspector( props ) {
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={ logoWidth }
-					label={__('Logo Width', 'cf7-blocks')}
+					label={__('Logo Width', 'gitenberg')}
 					onChange={ ( newValue ) =>
 						props.setAttributes( { logoWidth: newValue } )
 					}
@@ -46,7 +46,7 @@ function Inspector( props ) {
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={ labelColor }
-					label={__('Label Color', 'cf7-blocks')}
+					label={__('Label Color', 'gitenberg')}
 					onChange={ ( newValue ) =>
 						props.setAttributes( { labelColor: newValue } )
 					}
@@ -54,8 +54,8 @@ function Inspector( props ) {
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={ color }
-					label={__('Badge Color', 'cf7-blocks')}
-					help={__('Background color for the right part.', 'cf7-blocks')}
+					label={__('Badge Color', 'gitenberg')}
+					help={__('Background color for the right part.', 'gitenberg')}
 					onChange={ ( newValue ) =>
 						props.setAttributes( { color: newValue } )
 					}

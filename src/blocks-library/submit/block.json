@@ -1,50 +1,49 @@
 {
     "$schema": "https://json.schemastore.org/block.json",
     "apiVersion": 2,
-    "name": "cf7-blocks/submit",
-    "title": "Submit",
+    "name": "gitenberg/shields-badge",
+    "title": "Shields Badge",
     "category": "text",
-    "description": "Submit",
+    "description": "Badge",
     "keywords": [
-        "submit"
+        "badge"
     ],
     "version": "1.0.0",
-    "textdomain": "cf7-blocks",
+    "textdomain": "gitenberg",
     "attributes": {
         "label": {
-          "type": "string",
-          "default": "healthinesses"
+            "type": "string",
+            "default": "healthinesses"
         },
         "logo": {
-          "type": "string",
-          "default": "appveyor"
+            "type": "string",
+            "default": "appveyor"
         },
         "logoColor": {
-          "type": "string",
-          "default": "violet"
+            "type": "string",
+            "default": "violet"
         },
         "logoWidth": {
-          "type": "number",
-          "default": 40
+            "type": "number",
+            "default": 40
         },
         "link": {
-          "type": "array",
-          "default": ["http://left", "http://right"]
+            "type": "array",
+            "default": ["http://left", "http://right"]
         },
         "labelColor": {
-          "type": "string",
-          "default": "abcdef"
+            "type": "string",
+            "default": "abcdef"
         },
         "color": {
-          "type": "string",
-          "default": "fedcba"
+            "type": "string",
+            "default": "fedcba"
         },
         "cacheSeconds": {
-          "type": "number",
-          "default": 3600
+            "type": "number",
+            "default": 3600
         }
-      }
-      ,
+    },
     "supports": {
         "multiple": false,
         "spacing": {

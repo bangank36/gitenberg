@@ -72,7 +72,7 @@ function attachEditor( dom ) {
 						'core/table',
 						'core/paragraph',
 
-						'cf7-blocks/submit'
+						'gitenberg/shields-badge'
 					]
 				}
 			}
