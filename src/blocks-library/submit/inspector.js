@@ -5,14 +5,29 @@ import { __ } from '@wordpress/i18n';
 import {
 	InspectorControls,
 } from '@wordpress/block-editor';
-import { TextControl, PanelBody } from '@wordpress/components';
+import { 
+	TextControl, 
+	SelectControl,
+	PanelBody } from '@wordpress/components';
 
 function Inspector( props ) {
-	const { label, logo, logoColor, logoWidth, labelColor, color } = props.attributes;
+	const { label, logo, logoColor, logoWidth, labelColor, color, style } = props.attributes;
 
 	return (
 		<InspectorControls>
 			<PanelBody title={ __( 'Parameters', 'gitenberg' ) }>
+				<SelectControl
+					label={__('Badge Style', 'gitenberg')}
+					value={ style }
+					options={ [
+						{ label: 'Plastic', value: 'plastic' },
+						{ label: 'Square', value: 'flat' },
+						{ label: 'Flat square', value: 'flat-square' },
+						{ label: 'For the badge', value: 'for-the-badge' },
+						{ label: 'Social', value: 'social' }
+					] }
+					onChange={(newValue) => props.setAttributes({ style: newValue })}
+				/>
 				<TextControl
 					style={ { maxWidth: '100%' } }
 					value={label}

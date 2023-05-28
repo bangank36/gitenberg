@@ -16,7 +16,7 @@ export default function edit( props ) {
 		className: classnames( 'cf7-submit-field' ),
 	} );
 
-	const { label, logo, logoColor, logoWidth, labelColor, color } = props.attributes;
+	const { label, logo, logoColor, logoWidth, labelColor, color, style } = props.attributes;
 	const shieldsUrl = addQueryArgs( 'https://shields.io/badge/style-flat--square-green', {
 		label, 
 		logo, 
@@ -24,7 +24,7 @@ export default function edit( props ) {
 		logoWidth, 
 		labelColor, 
 		color,
-		style: 'flat-square',
+		style
 	})
 
 	return (

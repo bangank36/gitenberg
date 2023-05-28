@@ -11,6 +11,10 @@
     "version": "1.0.0",
     "textdomain": "gitenberg",
     "attributes": {
+        "style": {
+            "type": "string",
+            "default": "flat-square"
+        },
         "label": {
             "type": "string",
             "default": "healthinesses"
