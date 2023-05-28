@@ -3,49 +3,64 @@
  */
 import { __ } from '@wordpress/i18n';
 import {
-	InspectorAdvancedControls,
 	InspectorControls,
 } from '@wordpress/block-editor';
 import { TextControl, PanelBody } from '@wordpress/components';
-import { convertSubmitBlockToCF7Shortcode } from '../utils/convert-to-cf7-shortcode';
 
 function Inspector( props ) {
-	const { label, id } = props.attributes;
+	const { label, logo, logoColor, logoWidth, labelColor, color } = props.attributes;
 
 	return (
 		<InspectorControls>
-			<PanelBody title={ __( 'Generated Shortcode', 'cf7-blocks' ) }>
+			<PanelBody title={ __( 'Parameters', 'cf7-blocks' ) }>
 				<TextControl
 					style={ { maxWidth: '100%' } }
-					value={ convertSubmitBlockToCF7Shortcode(
-						props.attributes
-					) }
+					value={label}
+					label={__('Label', 'cf7-blocks')}
+					help={__('Left-hand-side text', 'cf7-blocks')}
+					onChange={(newValue) => props.setAttributes({ label: newValue })}
 				/>
-			</PanelBody>
-			<PanelBody
-				title={ __( 'General', 'cf7-blocks' ) }
-				initialOpen={ false }
-			>
 				<TextControl
-					value={ label }
-					label={ __( 'Label', 'cf7-blocks' ) }
-					help={ __( 'Write a submit label text.', 'cf7-blocks' ) }
+					style={ { maxWidth: '100%' } }
+					value={logo}
+					label={__('Logo', 'cf7-blocks')}
+					help={__('Insert the logo name or custom logo image.', 'cf7-blocks')}
+					onChange={(newValue) => props.setAttributes({ logo: newValue })}
+				/>
+				<TextControl
+					style={ { maxWidth: '100%' } }
+					value={ logoColor }
+					label={__('Logo Color', 'cf7-blocks')}
 					onChange={ ( newValue ) =>
-						props.setAttributes( { label: newValue } )
+						props.setAttributes( { logoColor: newValue } )
+					}
+				/>
+				<TextControl
+					style={ { maxWidth: '100%' } }
+					value={ logoWidth }
+					label={__('Logo Width', 'cf7-blocks')}
+					onChange={ ( newValue ) =>
+						props.setAttributes( { logoWidth: newValue } )
+					}
+				/>
+				<TextControl
+					style={ { maxWidth: '100%' } }
+					value={ labelColor }
+					label={__('Label Color', 'cf7-blocks')}
+					onChange={ ( newValue ) =>
+						props.setAttributes( { labelColor: newValue } )
+					}
+				/>
+				<TextControl
+					style={ { maxWidth: '100%' } }
+					value={ color }
+					label={__('Badge Color', 'cf7-blocks')}
+					help={__('Background color for the right part.', 'cf7-blocks')}
+					onChange={ ( newValue ) =>
+						props.setAttributes( { color: newValue } )
 					}
 				/>
 			</PanelBody>
-			<InspectorAdvancedControls>
-				<TextControl
-					value={ id }
-					label={ __( 'Unique Id', 'cf7-blocks' ) }
-					help={ __( 'Add a unique id attribute.', 'cf7-blocks' ) }
-					onChange={ ( newId ) => {
-						const idWithoutSpace = newId.replace( ' ', '' );
-						props.setAttributes( { id: idWithoutSpace } );
-					} }
-				/>
-			</InspectorAdvancedControls>
 		</InspectorControls>
 	);
 }

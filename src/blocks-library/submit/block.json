@@ -12,32 +12,47 @@
     "textdomain": "cf7-blocks",
     "attributes": {
         "label": {
-            "type": "string",
-            "default": ""
+          "type": "string",
+          "default": "healthinesses"
         },
-        "id": {
-            "type": "string",
-            "default": ""
+        "logo": {
+          "type": "string",
+          "default": "appveyor"
         },
-        "style": {
-            "type": "object",
-            "default": {
-                "spacing": {
-                    "margin": {
-                        "top": "0",
-                        "right": "0",
-                        "left": "0",
-                        "bottom": "20px"
-                    }
-                }
-            }
+        "logoColor": {
+          "type": "string",
+          "default": "violet"
+        },
+        "logoWidth": {
+          "type": "number",
+          "default": 40
+        },
+        "link": {
+          "type": "array",
+          "default": ["http://left", "http://right"]
+        },
+        "labelColor": {
+          "type": "string",
+          "default": "abcdef"
+        },
+        "color": {
+          "type": "string",
+          "default": "fedcba"
+        },
+        "cacheSeconds": {
+          "type": "number",
+          "default": 3600
         }
-    },
+      }
+      ,
     "supports": {
         "multiple": false,
         "spacing": {
             "margin": true
-        }
+        },
+        "customClassName": false,
+        "anchor": false,
+        "html": false
     },
     "styles": []
 }

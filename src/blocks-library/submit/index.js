@@ -6,6 +6,8 @@ import save from './save';
 
 import { button } from '@wordpress/icons';
 
+console.log('import');
+
 registerBlockType( metadata, {
 	apiVersion: 2,
 	edit,

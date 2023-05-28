@@ -4,6 +4,7 @@
 import { isEmpty } from 'lodash';
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
+import { addQueryArgs } from '@wordpress/url';
 /**
  *  Custom Dependencies
  */
@@ -15,16 +16,21 @@ export default function edit( props ) {
 		className: classnames( 'cf7-submit-field' ),
 	} );
 
-	const { id, label } = props.attributes;
+	const { label, logo, logoColor, logoWidth, labelColor, color } = props.attributes;
+	const shieldsUrl = addQueryArgs( 'https://shields.io/badge/style-flat--square-green', {
+		label, 
+		logo, 
+		logoColor, 
+		logoWidth, 
+		labelColor, 
+		color,
+		style: 'flat-square',
+	})
 
 	return (
 		<>
 			<div { ...blockProps }>
-				<input
-					id={ id }
-					type="submit"
-					value={ isEmpty( label ) ? 'Submit' : label }
-				/>
+				<img src={shieldsUrl}/>
 			</div>
 			<Inspector { ...props } />
 		</>
