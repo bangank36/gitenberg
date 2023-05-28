@@ -53,8 +53,14 @@ function attachEditor( dom ) {
 				moreMenu: {
 					topToolbar: true
 				},
-				sidebar: {inserter: false, inspector: false},
-				toolbar: {navigation: true, inspector: true},
+				sidebar: {
+					inserter: false, 
+					inspector: false
+				},
+				toolbar: {
+					navigation: true, 
+					inspector: true
+				},
 				blocks: {
 					allowBlocks: [
 						'core/image',
@@ -64,7 +70,9 @@ function attachEditor( dom ) {
 						'core/pullquote',
 						'core/table',
 						'core/table',
-						'core/paragraph'
+						'core/paragraph',
+
+						'gitenberg/shields-badge'
 					]
 				}
 			}

@@ -1,0 +1,4 @@
+/**
+ * Blocks
+ */
+import './shields-badge';

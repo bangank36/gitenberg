@@ -1,0 +1,61 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 2,
+    "name": "gitenberg/shields-badge",
+    "title": "Shields Badge",
+    "category": "text",
+    "description": "Badge",
+    "keywords": [
+        "badge"
+    ],
+    "version": "1.0.0",
+    "textdomain": "gitenberg",
+    "attributes": {
+        "style": {
+            "type": "string",
+            "default": "flat-square"
+        },
+        "label": {
+            "type": "string",
+            "default": "healthinesses"
+        },
+        "logo": {
+            "type": "string",
+            "default": "appveyor"
+        },
+        "logoColor": {
+            "type": "string",
+            "default": "violet"
+        },
+        "logoWidth": {
+            "type": "number",
+            "default": 40
+        },
+        "link": {
+            "type": "array",
+            "default": ["http://left", "http://right"]
+        },
+        "labelColor": {
+            "type": "string",
+            "default": "abcdef"
+        },
+        "color": {
+            "type": "string",
+            "default": "fedcba"
+        },
+        "cacheSeconds": {
+            "type": "number",
+            "default": 3600
+        }
+    },
+    "supports": {
+        "multiple": false,
+        "spacing": {
+            "margin": true
+        },
+        "customClassName": false,
+        "anchor": false,
+        "html": false
+    },
+    "styles": []
+}
