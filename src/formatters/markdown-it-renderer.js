@@ -1,8 +1,4 @@
-import cb from 'markdown-it-custom-block';
-
-
 export const gitenbergRenderer = function (md) {
-    return;
     md.renderer.rules.image = function (tokens, idx, options, env, slf) {
 		const token = tokens[idx];
 		const srcAttribute = token.attrGet('src');
