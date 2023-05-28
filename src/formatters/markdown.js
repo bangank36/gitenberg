@@ -44,8 +44,6 @@ export function load( content, parser, rawHandler ) {
 	}
 
 	let htmlContent = md.render( content.value );
-	
-	console.log(htmlContent);
 
 	// Raw HTML - do our best
 	return rawHandler( { HTML: htmlContent } );
