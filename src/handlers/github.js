@@ -72,7 +72,8 @@ function attachEditor( dom ) {
 						'core/table',
 						'core/paragraph',
 
-						'gitenberg/shields-badge'
+						'gitenberg/shields-badge',
+						'gitenberg/accordion'
 					]
 				}
 			}
