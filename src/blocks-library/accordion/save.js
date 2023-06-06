@@ -15,18 +15,10 @@ const Save = ({
 	});
 
 	return (
-		<details { ...blockProps }>
-			<summary className="wp-block-themeisle-blocks-accordion-item__title">
-				<RichText.Content
-					tagName={ attributes.tag || 'div' }
-					value={ attributes.title }
-				/>
-			</summary>
-
-			<div className="wp-block-themeisle-blocks-accordion-item__content">
-				<InnerBlocks.Content />
-			</div>
-		</details>
+		<details>
+            <summary>This is the accordion title</summary>
+            This is the accordion content
+        </details>
 	);
 };
 
