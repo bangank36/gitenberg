@@ -34,6 +34,6 @@ function Inspector( props ) {
 			</PanelBody>
 		</InspectorControls>
     );
- }
+}
 
- export default Inspector;
+export default Inspector;
