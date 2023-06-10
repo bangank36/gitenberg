@@ -1,15 +1,16 @@
 /**
  * WordPress Dependencies
  */
- import { __ } from '@wordpress/i18n';
- import {
-     InspectorControls,
- } from '@wordpress/block-editor';
- import { 
-     ToggleControl,
-     PanelBody } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
+import {
+    InspectorControls,
+} from '@wordpress/block-editor';
+import { 
+    ToggleControl,
+    PanelBody 
+} from '@wordpress/components';
  
- function Inspector( props ) {
+function Inspector( props ) {
      const { initialOpen } = props.attributes;
 
      const onInitialOpenToggle = initialOpen => {
@@ -20,7 +21,7 @@
 		}
     }
  
-     return (
+    return (
         <InspectorControls>
 			<PanelBody
 				title={ __( 'Settings', 'otter-blocks' ) }
@@ -32,7 +33,7 @@
 				/>
 			</PanelBody>
 		</InspectorControls>
-     );
+    );
  }
 
  export default Inspector;
