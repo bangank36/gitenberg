@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies.
  */
- import {
+import {
 	InnerBlocks,
 	RichText,
 	useBlockProps

@@ -1,40 +1,40 @@
 /**
  * External dependencies
  */
- import classnames from 'classnames';
+import classnames from 'classnames';
 
- /**
-  * WordPress dependencies.
-  */
- import { __ } from '@wordpress/i18n';
+/**
+ * WordPress dependencies.
+ */
+import { __ } from '@wordpress/i18n';
+
+import {
+    InnerBlocks,
+    RichText,
+    useBlockProps
+} from '@wordpress/block-editor';
+
+import {
+    Fragment, useEffect,
+    useState
+} from '@wordpress/element';
  
- import {
-     InnerBlocks,
-     RichText,
-     useBlockProps
- } from '@wordpress/block-editor';
+/**
+ * Internal dependencies
+ */
+import Inspector from './inspector';
+import { select } from '@wordpress/data';
  
- import {
-     Fragment, useEffect,
-     useState
- } from '@wordpress/element';
- 
- /**
-  * Internal dependencies
-  */
- import Inspector from './inspector';
- import { select } from '@wordpress/data';
- 
- /**
-  * Accordion Item component
-  * @param {import('./types.js').AccordionItemProps} props
-  * @returns
-  */
- const Edit = ({
-     clientId,
-     attributes,
-     setAttributes
- }) => {
+/**
+ * Accordion Item component
+ * @param {import('./types.js').AccordionItemProps} props
+ * @returns
+ */
+const Edit = ({
+    clientId,
+    attributes,
+    setAttributes
+}) => {
     const [ isOpen, setOpen ] = useState( true );
  
     const toggle = e => {
@@ -56,7 +56,7 @@
     }, []);
  
     return (
-         <Fragment>
+        <Fragment>
             <Inspector
 				clientId={ clientId }
 				attributes={ attributes }
@@ -84,9 +84,9 @@
 					/>
 				</div>
             </div>
-         </Fragment>
+        </Fragment>
      );
- };
+};
  
- export default Edit;
+export default Edit;
  
