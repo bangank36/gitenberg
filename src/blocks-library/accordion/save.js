@@ -16,7 +16,11 @@ const Save = ({
 
 	return (
 		<details>
-            <summary>This is the accordion title</summary>
+            <summary className="wp-block-themeisle-blocks-accordion-item__title">
+				<RichText.Content
+					value={ attributes.title }
+				/>
+			</summary>
             This is the accordion content
         </details>
 	);
