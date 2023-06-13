@@ -24,7 +24,7 @@ import {
  */
 import Inspector from './inspector';
 import { select } from '@wordpress/data';
- 
+
 /**
  * Accordion Item component
  * @param {import('./types.js').AccordionItemProps} props
@@ -68,7 +68,7 @@ const Edit = ({
 				})}
 			>
 				<div
-					className="wp-block-themeisle-blocks-accordion-item__title"
+					className="gitenberg-blocks-accordion-item__title"
 					onClick={ toggle }
 				>
 					<RichText
@@ -80,9 +80,16 @@ const Edit = ({
 
 							setAttributes({ title: value });
 						} }
-						tagName={ attributes.tag || 'div' }
 					/>
 				</div>
+
+                <div className="gitenberg-blocks-accordion-item__content">
+                    <InnerBlocks
+                        template={ [[ 'core/paragraph', {
+                            content: __( 'This is a placeholder tab content. It is important to have the necessary information in the block, but at this stage, it is just a placeholder to help you visualise how the content is displayed. Feel free to edit this with your actual content.', 'otter-blocks' )
+                        }]] }
+                    />
+                </div>
             </div>
         </Fragment>
      );

@@ -16,12 +16,14 @@ const Save = ({
 
 	return (
 		<details>
-            <summary className="wp-block-themeisle-blocks-accordion-item__title">
+            <summary className="gitenberg-blocks-accordion-item__title">
 				<RichText.Content
 					value={ attributes.title }
 				/>
 			</summary>
-            This is the accordion content
+            <div className="gitenberg-blocks-accordion-item__content">
+				<InnerBlocks.Content />
+			</div>
         </details>
 	);
 };
