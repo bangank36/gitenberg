@@ -24,10 +24,10 @@ function Inspector( props ) {
     return (
         <InspectorControls>
 			<PanelBody
-				title={ __( 'Settings', 'otter-blocks' ) }
+				title={ __( 'Settings', 'gitenberg' ) }
 			>
 				<ToggleControl
-					label={ __( 'Initially Open', 'otter-blocks' ) }
+					label={ __( 'Initially Open', 'gitenberg' ) }
 					checked={ initialOpen }
 					onChange={ onInitialOpenToggle }
 				/>

@@ -51,7 +51,7 @@ const Edit = ({
              const parentClientId = select( 'core/block-editor' ).getBlockParents( clientId ).at( -1 );
              const parentBlock = select( 'core/block-editor' ).getBlock( parentClientId );
  
-             setAttributes({ title: __( 'Accordion item ', 'otter-blocks' ) + parentBlock.innerBlocks.length });
+             setAttributes({ title: __( 'Accordion item ', 'gitenberg' ) + parentBlock.innerBlocks.length });
         }
     }, []);
  
@@ -86,7 +86,7 @@ const Edit = ({
                 <div className="gitenberg-blocks-accordion-item__content">
                     <InnerBlocks
                         template={ [[ 'core/paragraph', {
-                            content: __( 'This is a placeholder tab content. It is important to have the necessary information in the block, but at this stage, it is just a placeholder to help you visualise how the content is displayed. Feel free to edit this with your actual content.', 'otter-blocks' )
+                            content: __( 'This is a placeholder tab content. It is important to have the necessary information in the block, but at this stage, it is just a placeholder to help you visualise how the content is displayed. Feel free to edit this with your actual content.', 'gitenberg' )
                         }]] }
                     />
                 </div>
