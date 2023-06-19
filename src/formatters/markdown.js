@@ -30,6 +30,14 @@ turndown.addRule( 'listItem', {
 	},
 } );
 
+// Keeping the <details> content when process in turndown
+turndown.addRule('keep', {
+	filter: ['details'],
+	replacement: function (content, node) {
+	  	return node.outerHTML
+	}
+} )
+
 /**
  * Initial content loader. Determine if the textarea contains blocks or raw HTML
  * @param {string} content Text area content
